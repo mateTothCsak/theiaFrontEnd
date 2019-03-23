@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Iframe from "react-iframe";
+import Navbar from '../../commonComponents/Navbar/Navbar';
 
 class Game extends Component {
     constructor(props) {
@@ -10,7 +11,7 @@ class Game extends Component {
     render() {
         return (
             <Fragment>
-                <p id="playgame">Welcome to Theia Online!</p>
+                <Navbar pageName="Game" />
                 <Iframe url="http://localhost/theia/theiagame/index.html"
                         width="480px"
                         height="660px"
