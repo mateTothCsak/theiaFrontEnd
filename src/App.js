@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import {Route, Router, Switch} from "react-router-dom";
-import Index from './containers/Index/Index';
-import Game from './containers/Game/Game';
-import Registration from './containers/Registration/Registration';
+import Index from './pages/Index/Index';
+import Game from './pages/Game/Game';
+import Registration from './pages/Registration/Registration';
+import LogIn from './pages/LogIn/LogIn';
 import './App.css';
 import history from './History';
+import Encyclopedia from "./pages/Encyclopedia/Encyclopedia";
 
 
 
@@ -13,7 +15,7 @@ class App extends Component {
         super(props);
 
         this.state = {
-            data : []
+            isMateHappy: true
         };
     }
 
@@ -21,9 +23,11 @@ class App extends Component {
       return  (
       <Router history={history}>
           <Switch>
-              <Route exact path="/" render={() => <Index /> } />
-              <Route exact path="/game" render={() => <Game /> } />>
-              <Route exact path="/registration" render={() => <Registration /> } />>
+              <Route exact path="/" component={Index}/>
+              <Route exact path="/game" component={Game} />>
+              <Route exact path="/registration" component={Registration} />>
+              <Route exact path="/login" component={LogIn}  />>
+              <Route exact path="/encyclopedia" component={Encyclopedia}  />>
           </Switch>
       </Router>
       )

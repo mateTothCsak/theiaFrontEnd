@@ -1,11 +1,22 @@
 import React, { Component, Fragment } from 'react';
 import classes from './Navbar.css';
+import LoggedInNav from "./LoggedInNav/LoggedInNav";
+import NoUserNav from "./NoUserNav/NoUserNav";
 
 class Navbar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            pageName: "| " + props.pageName
+            pageName: "| " + props.pageName,
+            user: props.user
+        }
+    }
+
+    renderNavconent(){
+        if(this.state.user === false){
+            return <NoUserNav pageName={this.state.pageName} user={this.state.user}/>
+        } else {
+            return <LoggedInNav pageName={this.state.pageName} user={this.state.user}/>
         }
     }
 
@@ -14,13 +25,7 @@ class Navbar extends Component {
             <Fragment>
                 <img src={require ('../../assets/images/indexBanner.png')}/>
                 <div>
-                    <ul>
-                        <li id='logo'><a href="/">Theia Online</a></li>
-                        <li id='pageName'>{this.state.pageName}</li>
-                        <li><a href="/registration">Register</a></li>
-                        <li><a href="contact.asp">Log In</a></li>
-                        <li><a href="news.asp">Encyclopedia</a></li>
-                    </ul>
+                    {this.renderNavconent()}
                 </div>
             </Fragment>
         )

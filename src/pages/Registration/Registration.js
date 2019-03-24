@@ -1,5 +1,6 @@
 import React, {Component, Fragment } from 'react';
 import Navbar from '../../commonComponents/Navbar/Navbar';
+import {classes} from './Registration.css';
 
 
 class Registration extends Component {
@@ -35,48 +36,48 @@ class Registration extends Component {
     render() {
         return (
             <Fragment>
-                <Navbar pageName="Registration"/>
+                <Navbar pageName="Registration" user={false} />
+                <h1>Registration</h1>
                 <div className="register">
                     <form action='http://localhost:8080/registration' method="post">
                         <label>
-                            Email address:
-                            <input
+                            Email address:</label><br/>
+                        <input
                                 value={this.state.email}
                                 onChange={this.handleEmailChange}
                                 type="text"
                                 name="email"
                                  />
-                        </label>
+
                         <br/>
                         <label>
-                            Username:
+                            Username:</label>
+                        <br/>
                             <input
                                 name="userName"
                                 type="text"
                                 onChange={this.handleUserNameChange} />
-                        </label>
                         <br/>
                         <label>
-                            Password:
+                            Password:</label>
+                        <br/>
                             <input
                                 name="password"
                                 type="password"
                                 onChange={this.handlePasswordChange} />
-                        </label>
                         <br/>
                         <label>
-                            Confirm Password:
+                            Confirm Password:</label>
+                        <br/>
                             <input
                                 type="password"
                                 onChange={this.handleConfirmPasswordChange} />
-                        </label>
                         <br/>
                         <label>
-                            I have read and understood the terms and conditions:
-                            <input
+                            I have read and understood the terms and conditions:</label>
+                            <input id="checkBox"
                                 type="checkbox"
                                 onChange={this.handleAcceptedChange} />
-                        </label>
                         <br/>
                         <button type="submit" disabled={!this.validateForm()} >Register</button>
                     </form>
