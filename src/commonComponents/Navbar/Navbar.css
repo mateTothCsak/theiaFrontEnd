@@ -1,5 +1,5 @@
 
-ul {
+.navBar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ ul {
     box-shadow: 2px 2px 5px #531205;
 }
 
-li {
+.navItem {
     float: right;
 }
 
@@ -26,7 +26,7 @@ li {
     color: #531205;
 }
 
-li a, #pageName {
+.navItem a, #pageName {
     display: block;
     color: white;
     text-align: center;
@@ -34,7 +34,7 @@ li a, #pageName {
     text-decoration: none;
 }
 
-li a:hover {
+.navItem a:hover {
     background-color: #531205;
 }
 

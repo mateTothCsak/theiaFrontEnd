@@ -1,7 +1,7 @@
 import React, {Component, Fragment } from 'react';
 import Navbar from '../../commonComponents/Navbar/Navbar';
 import {Link, Redirect} from "react-router-dom";
-import * as axios from "axios";
+import api from '../../connection/api';
 
 
 class LogIn extends Component{
@@ -11,35 +11,11 @@ class LogIn extends Component{
         this.state = {
             email: "",
             password: "",
-            redirect: false
+            user: null
         }
-
 
     }
 
-    /*
-    componentDidMount() {
-
-        let config = {
-            headers: {
-                crossOrigin: true,
-                crossorigin: true,
-                "Access-Control-Allow-Origin": "*",
-                'Access-Control-Allow-Methods' : 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
-            }
-        }
-
-        let data = {}
-
-        const API_URL = 'http://localhost:8080/login';
-        const Headers = {"Access-Control-Allow-Origin": "*", crossOrigin: true}
-
-
-        axios.get(API_URL, Headers)
-            .then(response => console.log(response))
-            .catch(err => console.log(err));
-        console.log("I tried");
-    }*/
 
     handleEmailChange = event => {this.setState({email: event.target.value});};
     handlePasswordChange = event => {this.setState({password: event.target.value});};
@@ -57,9 +33,14 @@ class LogIn extends Component{
     }
 
     logIn = event => {
-        this.setState({user:
-                {userName: this.state.email, level: 1}})
-        return <Redirect  to={{pathname: "/", state: this.state.user}}/>
+        let userDetails = {};
+
+        api.post("/login", {email: this.state.email, password: this.state.password})
+            .then(response => {
+                userDetails = response.data;
+                this.setState({user: {userName: userDetails.userName, level: 1}}, () => {})
+            })
+            .catch(err => console.log(err));
 
     }
 
@@ -88,12 +69,12 @@ class LogIn extends Component{
                             type="password"
                             onChange={this.handlePasswordChange} />
                         <br/>
-                        {this.logIn}
-                        <Link to={{pathname: '/', state: {userName: this.state.email, character: "male"}}}><button type="button" disabled={!this.validateForm()} >Register</button></Link>
+                        <div>
+                            {this.state.user && <Redirect to={{pathname: "/", state: {userName: this.state.user.userName, level: 1}}}/>}
+                            <button type="button" onClick={this.logIn}>Log In</button>
+                        </div>
                     </form>
                 </div>
-
-
             </Fragment>
         )
     }
@@ -101,31 +82,3 @@ class LogIn extends Component{
 }
 
 export default LogIn;
-
-
-/*
-setRedirect = () => {
-    this.setState({
-        redirect: true
-    })
-}
-renderRedirect = () => {
-    if (this.state.redirect) {
-        return <Redirect
-            to={{
-                pathname: "/",
-                search: "?utm=your+face",
-                state: {referrer: "loginpage"}
-            }}
-        />
-    }
-};
-
-
-     <div>
-            {this.renderRedirect()}
-            <button onClick={this.setRedirect}>Redirect</button>
-        </div>
-
-        <Link to={{pathname: '/', state: { userName: "Qwerox", character: "male"}}}>Go to homepage</Link>
- */

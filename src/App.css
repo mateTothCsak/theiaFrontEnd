@@ -3,5 +3,16 @@ body {
     background-color: #f0e5c5;
     font: italic bold 1em "Times New Roman";
     color: #491409;
+}
 
+
+.centerText{
+    text-align: center;
+}
+
+
+.nonDecoratedLink {
+    color: inherit;
+    text-decoration: inherit;
+    text-shadow: 1px 1px 1px black;
 }

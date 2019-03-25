@@ -7,6 +7,7 @@ import LogIn from './pages/LogIn/LogIn';
 import './App.css';
 import history from './History';
 import Encyclopedia from "./pages/Encyclopedia/Encyclopedia";
+import LogOut from "./pages/LogOut/LogOut";
 
 
 
@@ -27,6 +28,7 @@ class App extends Component {
               <Route exact path="/game" component={Game} />>
               <Route exact path="/registration" component={Registration} />>
               <Route exact path="/login" component={LogIn}  />>
+              <Route exact path="/logout" component={LogOut}  />>
               <Route exact path="/encyclopedia" component={Encyclopedia}  />>
           </Switch>
       </Router>
