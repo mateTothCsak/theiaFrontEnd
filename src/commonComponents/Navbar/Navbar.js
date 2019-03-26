@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import classes from './Navbar.css';
+import './Navbar.css';
 import LoggedInNav from "./LoggedInNav/LoggedInNav";
 import NoUserNav from "./NoUserNav/NoUserNav";
 

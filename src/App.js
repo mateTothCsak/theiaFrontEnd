@@ -8,6 +8,8 @@ import './App.css';
 import history from './History';
 import Encyclopedia from "./pages/Encyclopedia/Encyclopedia";
 import LogOut from "./pages/LogOut/LogOut";
+import Profile from "./pages/Profile/Profile";
+import Craft from "./pages/Craft/Craft";
 
 
 
@@ -16,7 +18,6 @@ class App extends Component {
         super(props);
 
         this.state = {
-            isMateHappy: true
         };
     }
 
@@ -30,6 +31,8 @@ class App extends Component {
               <Route exact path="/login" component={LogIn}  />>
               <Route exact path="/logout" component={LogOut}  />>
               <Route exact path="/encyclopedia" component={Encyclopedia}  />>
+              <Route exact path="/profile" component={Profile}  />>
+              <Route exact path="/craft" component={Craft}  />>
           </Switch>
       </Router>
       )

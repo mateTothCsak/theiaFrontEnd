@@ -38,7 +38,7 @@ class LogIn extends Component{
         api.post("/login", {email: this.state.email, password: this.state.password})
             .then(response => {
                 userDetails = response.data;
-                this.setState({user: {userName: userDetails.userName, level: 1}}, () => {})
+                this.setState({user: {userName: userDetails.userName, id: userDetails.id}}, () => {})
             })
             .catch(err => console.log(err));
 

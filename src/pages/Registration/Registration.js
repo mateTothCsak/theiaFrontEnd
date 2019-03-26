@@ -1,6 +1,6 @@
 import React, {Component, Fragment } from 'react';
 import Navbar from '../../commonComponents/Navbar/Navbar';
-import {classes} from './Registration.css';
+import './Registration.css';
 
 
 class Registration extends Component {
