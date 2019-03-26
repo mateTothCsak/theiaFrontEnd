@@ -3,15 +3,16 @@ import Navbar from '../../commonComponents/Navbar/Navbar';
 import './Encyclopdia.css';
 import Characters from "./bookElements/Characters";
 import Sidekicks from "./bookElements/Sidekicks";
+import Materials from "./bookElements/Materials";
 
 class Encyclopedia extends Component {
     constructor(props) {
         super(props);
+
         let user = this.props.location.state !== undefined ? this.props.location.state : false;
 
         this.state = {
             user: user,
-            //selected: 1
         }
     }
 
@@ -34,6 +35,7 @@ class Encyclopedia extends Component {
                     </ul>
                     <Characters />
                     <Sidekicks />
+                    <Materials/>
                 </div>
 
             </Fragment>

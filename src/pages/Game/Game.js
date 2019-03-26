@@ -7,6 +7,7 @@ class Game extends Component {
     constructor(props) {
         super(props);
 
+
         let user = this.props.location.state !== undefined ? this.props.location.state : false;
 
         this.state = {

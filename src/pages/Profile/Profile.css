@@ -1,0 +1,7 @@
+
+.profileContainer {
+    margin : 1em auto;
+    width: 90%;
+    background-color: #f0e5c5;
+    display: flex;
+}

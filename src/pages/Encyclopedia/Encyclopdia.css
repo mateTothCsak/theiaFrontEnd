@@ -48,7 +48,7 @@
 
 .bookElementHeader {
     padding-top: 1em;
-    text-decoration: underline;
+    text-shadow: 0.5px 0.5px 0.5px black;
     font-size: 2em;
 }
 
