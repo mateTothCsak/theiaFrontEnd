@@ -5,3 +5,7 @@
     background-color: #f0e5c5;
     display: flex;
 }
+
+.sidekickContainer {
+    display: flex;
+}

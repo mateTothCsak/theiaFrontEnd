@@ -46,21 +46,16 @@ class Profile extends Component {
                                         <td>70</td>
                                     </tr>
                                 </tbody>
-
                             </table>
                         </div>
-                        <div>
+                        <div className="sidekickContainer">
                             <div>
                                 <p>Left sidekick</p>
-                                <table>
-
-                                </table>
+                                <p>None</p>
                             </div>
                             <div>
                                 <p>Right sidekick</p>
-                                <table>
-
-                                </table>
+                                <p>None</p>
                             </div>
                         </div>
                     </div>

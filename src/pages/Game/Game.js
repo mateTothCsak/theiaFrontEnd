@@ -19,14 +19,14 @@ class Game extends Component {
         return (
             <Fragment>
                 <Navbar pageName="Game" user={this.state.user}/>
-                <div>
+                <h1>Game</h1>
                 <Iframe className="iframe" url="http://localhost/theia/theiagame/index.html"
                         width="480px"
                         height="660px"
                         id="game"
                         display="initial"
                         position="relative"
-                        allowFullScreen/></div>
+                        allowFullScreen/>
                 <p>Enjoy our game! ;)</p>
             </Fragment>
         )
