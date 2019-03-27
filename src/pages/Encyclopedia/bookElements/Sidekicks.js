@@ -12,8 +12,8 @@ const Sidekicks = (props) => {
     return(
         <div className="bookElementContainer">
             <h2 className="bookElementHeader">The following sidekicks can be collected </h2>
-            <Sidekick name="Elephant" pictureUrl="rockElephant" type="Rock" damage="75" health="50" attackSpeed="70" description={descriptions.elephant} />
-            <Sidekick name="Owl" pictureUrl="clayOwl" type="Clay" damage="100" health="30" attackSpeed="70" description={descriptions.owl} />
+            <Sidekick name="Elephant" pictureUrl="elephant" type="Rock" damage="75" health="50" attackSpeed="70" description={descriptions.elephant} />
+            <Sidekick name="Owl" pictureUrl="owl" type="Clay" damage="100" health="30" attackSpeed="70" description={descriptions.owl} />
         </div>
     )
 };

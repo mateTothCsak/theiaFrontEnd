@@ -2,3 +2,7 @@
 .craftContainer {
     display: flex;
 }
+
+#craftHeader{
+    text-align: center;
+}

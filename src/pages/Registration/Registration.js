@@ -1,6 +1,9 @@
 import React, {Component, Fragment } from 'react';
 import Navbar from '../../commonComponents/Navbar/Navbar';
 import './Registration.css';
+import {Link, Redirect} from "react-router-dom";
+import Index from "../Index/Index";
+import api from "../../connection/api";
 
 
 class Registration extends Component {
@@ -11,7 +14,8 @@ class Registration extends Component {
             email: "",
             password: "",
             confirmPassword: "",
-            accepted: false
+            accepted: false,
+            registered: false
         }
     }
 
@@ -31,6 +35,16 @@ class Registration extends Component {
     handleConfirmPasswordChange = event => {this.setState({confirmPassword: event.target.value});};
     handleAcceptedChange = event => {this.setState({accepted: !this.state.accepted});};
 
+    register = event => {
+        let userDetails = {};
+
+        api.post("/registration", {email: this.state.email, userName: this.state.userName, password: this.state.password})
+            .then(response => {
+                this.setState({registered: response.data}, () => {})
+            })
+            .catch(err => console.log(err));
+
+    }
 
 
     render() {
@@ -39,7 +53,7 @@ class Registration extends Component {
                 <Navbar pageName="Registration" user={false} />
                 <h1>Registration</h1>
                 <div className="register">
-                    <form action='http://localhost:8080/registration' method="post">
+                    <form >
                         <label>
                             Email address:</label><br/>
                         <input
@@ -79,7 +93,8 @@ class Registration extends Component {
                                 type="checkbox"
                                 onChange={this.handleAcceptedChange} />
                         <br/>
-                        <button type="submit" disabled={!this.validateForm()} >Register</button>
+                        {this.state.registered && <Redirect to={{pathname: "/login",}}/>}
+                        <button type="button" onClick={this.register} disabled={!this.validateForm()} >Register</button>
                     </form>
                 </div>
             </Fragment>

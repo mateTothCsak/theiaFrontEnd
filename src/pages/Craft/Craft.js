@@ -18,7 +18,7 @@ class Craft extends Component {
             <Fragment>
                 <Navbar pageName="Craft" user={this.state.user}/>
                 <h1>Craft</h1>
-                <h2>You can craft or buy Soul-stones here</h2>
+                <h2 id="craftHeader">You can craft or buy Soul-stones here</h2>
                 <p>These stones include one random Sidekick from the chosen material type</p>
                 <div className="craftContainer">
                     <div className="stoneContainer">

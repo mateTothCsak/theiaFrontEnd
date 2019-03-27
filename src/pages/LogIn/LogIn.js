@@ -11,7 +11,7 @@ class LogIn extends Component{
         this.state = {
             email: "",
             password: "",
-            user: null
+            user: {userName: null}
         }
 
     }
@@ -38,7 +38,24 @@ class LogIn extends Component{
         api.post("/login", {email: this.state.email, password: this.state.password})
             .then(response => {
                 userDetails = response.data;
-                this.setState({user: {userName: userDetails.userName, id: userDetails.id}}, () => {})
+                this.setState({user: {
+                                            userName: userDetails.userName,
+                                            id: userDetails.id,
+                                            type: userDetails.type,
+                                            attackSpeed: userDetails.attackSpeed,
+                                            baseHealth: userDetails.baseHealth,
+                                            characterType: userDetails.characterType,
+                                            damage: userDetails.damage,
+                                            email: userDetails.email,
+                                            experience: userDetails.experience,
+                                            gold: userDetails.gold,
+                                            lastLogIn: userDetails.lastLogIn,
+                                            level: userDetails.level,
+                                            registrationDate: userDetails.registrationDate,
+                                            leftSideKick: userDetails.leftSidekick,
+                                            rightSideKick: userDetails.rightSidekick
+
+                }}, () => {})
             })
             .catch(err => console.log(err));
 
@@ -69,8 +86,24 @@ class LogIn extends Component{
                             type="password"
                             onChange={this.handlePasswordChange} />
                         <br/>
-                        <div>
-                            {this.state.user && <Redirect to={{pathname: "/", state: {userName: this.state.user.userName, level: 1}}}/>}
+                         <div>
+                            {this.state.user.userName && <Redirect to={{pathname: "/", state: {
+                                    userName: this.state.user.userName,
+                                    id: this.state.user.id,
+                                    type: this.state.user.type,
+                                    attackSpeed: this.state.user.attackSpeed,
+                                    baseHealth: this.state.user.baseHealth,
+                                    characterType: this.state.user.characterType,
+                                    damage: this.state.user.damage,
+                                    email: this.state.user.email,
+                                    experience: this.state.user.experience,
+                                    gold: this.state.user.gold,
+                                    lastLogIn: this.state.user.lastLogIn,
+                                    level: this.state.user.level,
+                                    registrationDate: this.state.user.registrationDate,
+                                    leftSideKick: this.state.user.leftSidekick,
+                                    rightSideKick: this.state.user.rightSidekick,
+                            }}}/>}
                             <button type="button" onClick={this.logIn}>Log In</button>
                         </div>
                     </form>

@@ -28,7 +28,6 @@ class Encyclopedia extends Component {
                 <h1>Encyclopedia</h1>
                 <div className="encyclopediaContainer">
                     <ul className="encyclopediaBar">
-                        <li>Power-Up Items</li>
                         <li>Minerals</li>
                         <li>Sidekicks</li>
                         <li>Characters</li>

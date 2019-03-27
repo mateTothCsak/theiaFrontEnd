@@ -19,13 +19,13 @@ class Profile extends Component {
                 <Navbar pageName="Profile" user={this.state.user}/>
                 <h1>{this.state.user.userName}'s Profile</h1>
                 <div className="profileContainer">
-                    <div>
+                    <div className="profilePictureContainer">
                         <h2>{this.state.user.userName}</h2>
                         <img src={require ('../../assets/images/gary.png')}/>
                     </div>
-                    <div>
+                    <div className="profileStatContainer">
                         <div>
-                            <table>
+                            <table id="profileTable">
                                 <tbody>
                                     <tr>
                                         <th>Character Type</th>
@@ -37,13 +37,13 @@ class Profile extends Component {
                                         <th>Attack Speed</th>
                                     </tr>
                                     <tr>
-                                        <td>Maverick</td>
-                                        <td>1</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>50</td>
-                                        <td>200</td>
-                                        <td>70</td>
+                                        <td>{this.state.user.characterType}</td>
+                                        <td>{this.state.user.level}</td>
+                                        <td>{this.state.user.experience}</td>
+                                        <td>{this.state.user.gold}</td>
+                                        <td>{this.state.user.baseHealth}</td>
+                                        <td>{this.state.user.damage}</td>
+                                        <td>{this.state.user.attackSpeed}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -51,11 +51,11 @@ class Profile extends Component {
                         <div className="sidekickContainer">
                             <div>
                                 <p>Left sidekick</p>
-                                <p>None</p>
+                                {true && <img src={require ('../../assets/images/'+ "owl" + '.png')}/>}
                             </div>
                             <div>
                                 <p>Right sidekick</p>
-                                <p>None</p>
+                                {true && <img src={require ('../../assets/images/'+ "elephant" + '.png')}/>}
                             </div>
                         </div>
                     </div>

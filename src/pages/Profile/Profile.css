@@ -2,10 +2,57 @@
 .profileContainer {
     margin : 1em auto;
     width: 90%;
-    background-color: #f0e5c5;
+    background: #f9f6e8;
     display: flex;
 }
 
 .sidekickContainer {
     display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.profilePictureContainer{
+    width: 30%;
+    text-align: center;
+    background-color: #c97a70;
+    color: white;
+    font-size: 1.5em;
+    border-right: 10px solid #721b09;
+}
+
+.sidekickContainer img{
+    padding-bottom: 0.3em;
+    border-bottom: 5px solid #c97a70;
+}
+
+
+
+.profilePictureContainer h2{
+    width: 70%;
+    background: #721b09;
+    margin: 1em auto 0.5em auto;
+    padding: 0.2em;
+}
+
+.profilePictureContainer img {
+    margin-bottom: 1em;
+}
+
+
+.profileStatContainer{
+    margin: 0 auto;
+    padding-top: 2em;
+    font-size: 1.3em;
+}
+
+
+#profileTable {
+    background-color: #c97a70;
+}
+
+#profileTable td {
+    color: white;
+    text-align: center;
 }
