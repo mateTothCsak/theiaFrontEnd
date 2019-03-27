@@ -3,6 +3,7 @@ import Navbar from '../../commonComponents/Navbar/Navbar';
 import './Craft.css';
 import CraftContainer from "./craftElements/CraftContainer";
 import PurchasedSidekick from "./craftElements/PurchasedSidekick";
+import api from '../../connection/api';
 
 class Craft extends Component {
     constructor(props) {
@@ -30,11 +31,17 @@ class Craft extends Component {
     equipLeft = event => {
         this.state.user.leftSidekick = this.state.showShop;
         this.setState({showShop: ""})
+        api.post("/craft", {id: this.state.user.id, gold: -50, sidekick: this.state.user.leftSidekick, side: "left"})
+            .then(response => {})
+            .catch(err => console.log(err));
+
     }
 
     equipRight = event => {
         this.state.user.rightSidekick = this.state.showShop;
         this.setState({showShop: ""})
+        api.post("/craft", {id: this.state.user.id, gold: -50, sidekick: this.state.user.rightSidekick, side: "right"})
+            .then(response => {}).catch(err => console.log(err));
     }
 
 
