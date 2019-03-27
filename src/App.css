@@ -31,5 +31,10 @@ button:disabled {
 }
 
 button:focus{
+    background-color: #491409;
+}
+
+button:not(:disabled):hover {
     background-color: #531205;
+
 }

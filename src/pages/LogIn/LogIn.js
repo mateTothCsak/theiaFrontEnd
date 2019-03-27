@@ -52,8 +52,8 @@ class LogIn extends Component{
                                             lastLogIn: userDetails.lastLogIn,
                                             level: userDetails.level,
                                             registrationDate: userDetails.registrationDate,
-                                            leftSideKick: userDetails.leftSidekick,
-                                            rightSideKick: userDetails.rightSidekick
+                                            leftSidekick: userDetails.leftSidekick,
+                                            rightSidekick: userDetails.rightSidekick
 
                 }}, () => {})
             })
@@ -101,8 +101,8 @@ class LogIn extends Component{
                                     lastLogIn: this.state.user.lastLogIn,
                                     level: this.state.user.level,
                                     registrationDate: this.state.user.registrationDate,
-                                    leftSideKick: this.state.user.leftSidekick,
-                                    rightSideKick: this.state.user.rightSidekick,
+                                    leftSidekick: this.state.user.leftSidekick,
+                                    rightSidekick: this.state.user.rightSidekick,
                             }}}/>}
                             <button type="button" onClick={this.logIn}>Log In</button>
                         </div>

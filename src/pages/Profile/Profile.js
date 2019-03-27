@@ -51,11 +51,11 @@ class Profile extends Component {
                         <div className="sidekickContainer">
                             <div>
                                 <p>Left sidekick</p>
-                                {true && <img src={require ('../../assets/images/'+ "owl" + '.png')}/>}
+                                {this.state.user.leftSidekick && <img src={require ('../../assets/images/'+ this.state.user.leftSidekick + '.png')}/>}
                             </div>
                             <div>
                                 <p>Right sidekick</p>
-                                {true && <img src={require ('../../assets/images/'+ "elephant" + '.png')}/>}
+                                {this.state.user.leftSidekick && <img src={require ('../../assets/images/'+ this.state.user.rightSidekick + '.png')}/>}
                             </div>
                         </div>
                     </div>

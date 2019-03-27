@@ -18,7 +18,7 @@
 }
 
 .increaseSize{
-    font-size: 1.3em;
+    font-size: 1.6em;
 }
 
 .stoneContainer img{
@@ -39,4 +39,47 @@
 .stoneContainer button:not(:disabled):hover{
     background-color: gold;
     border-color: white;
+}
+
+
+
+.purchasedSidekick {
+    border: 8px solid #8d9933;
+    background: #c3c7a6;
+    text-align: center;
+    width: 35%;
+    margin: 1em auto;
+    padding: 1em;
+}
+
+.purchasedSidekick h2 {
+    font-size: 2em;
+}
+
+.purchasedSidekick button {
+    margin: 0.1em;
+}
+
+.goldContainer{
+    float:right;
+    width: 13%;
+    display: flex;
+    margin-right: 12em;
+    margin-bottom: 0.5em;
+    justify-content: center;
+    background: #c97a70;
+
+}
+
+.goldContainer img {
+    width: 20%;
+    height: 20%;
+    margin-left: 1em;
+    padding-top: 10px;
+}
+
+.goldContainer p{
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
 }
