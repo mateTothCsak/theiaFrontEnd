@@ -29,3 +29,7 @@ button:disabled {
     background-color: #58413c;
     color:#3f1712;
 }
+
+button:focus{
+    background-color: #531205;
+}

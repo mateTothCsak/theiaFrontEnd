@@ -1,8 +1,42 @@
 
 .craftContainer {
     display: flex;
+    background: #f9f6e8;
+    width: 75%;
+    margin: 1em auto;
+    justify-content: space-around;
+    text-align: center;
+    border: 8px solid #8d9933;
 }
 
-#craftHeader{
-    text-align: center;
+.stoneContainer{
+    padding: 1em 1em;
+    margin: 1em;
+    background: #c3c7a6;
+    width: 20%;
+    border-radius: 90%;
+}
+
+.increaseSize{
+    font-size: 1.3em;
+}
+
+.stoneContainer img{
+    padding: 5px;
+    width: 40%;
+}
+
+.stoneContainer p {
+    font-size: 1.5em;
+    background: #f0e5c5;
+    padding: 0.5em 0;
+}
+
+.stoneContainer button{
+    border-color: #3f1712;
+}
+
+.stoneContainer button:not(:disabled):hover{
+    background-color: gold;
+    border-color: white;
 }
