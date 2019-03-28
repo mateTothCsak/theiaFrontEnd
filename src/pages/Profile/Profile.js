@@ -55,7 +55,7 @@ class Profile extends Component {
                             </div>
                             <div>
                                 <p>Right sidekick</p>
-                                {this.state.user.leftSidekick && <img src={require ('../../assets/images/'+ this.state.user.rightSidekick + '.png')}/>}
+                                {this.state.user.rightSidekick && <img src={require ('../../assets/images/'+ this.state.user.rightSidekick + '.png')}/>}
                             </div>
                         </div>
                     </div>

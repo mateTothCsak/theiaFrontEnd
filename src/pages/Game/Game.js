@@ -25,6 +25,17 @@ class Game extends Component {
             .catch(err => console.log(err));
     }
 
+    collectRewards = event => {
+        api.post("/collectRewards", this.state.user.id)
+            .then(response => {
+                let userDetails = response.data;
+                this.state.user.experience = userDetails.experience;
+                this.state.user.gold = userDetails.gold;
+            })
+            .catch(err => console.log(err));
+
+    }
+
 
 
     render() {
@@ -41,7 +52,7 @@ class Game extends Component {
                             position="relative"
                             allowFullScreen/>
                     <h2>Move your character by click-and-drag</h2>
-                    <button>Collect Rewards</button>
+                    <button onClick={this.collectRewards}>Collect Rewards</button>
                 </div>
             </Fragment>
         )
