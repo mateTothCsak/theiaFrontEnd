@@ -1,5 +1,9 @@
 
 .iframe {
-    pading-top: 10em;
-    padding-left: 15em;
+    width: 35%;
+}
+
+.gameContainer{
+    text-align:center;
+    padding-bottom: 2em;
 }

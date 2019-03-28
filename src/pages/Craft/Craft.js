@@ -56,7 +56,6 @@ class Craft extends Component {
                 <p className="centerText increaseSize">These stones include one random Sidekick from the chosen material type</p>
                 {this.state.showShop == "" && <CraftContainer showShop = {this.state.showShop} buyClay={this.buyClay} buyRock={this.buyRock} gold={this.state.user.gold}/>}
                 {this.state.showShop && <PurchasedSidekick showShop = {this.state.showShop} equipLeft={this.equipLeft} equipRight={this.equipRight}/>}
-
             </Fragment>
         )
     }
