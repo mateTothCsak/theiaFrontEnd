@@ -1,0 +1,52 @@
+
+.componentContainer{
+    display: flex;
+    justify-content: space-around;
+    border-top: none;
+}
+
+
+.descriptionContainer{
+    width: 30%;
+    background: #F9EDCA;
+}
+
+.statContainer{
+    width: 30%;
+    background: #f9f6e8;
+    text-align: center;
+}
+
+.componentPictureContainer{
+    width: 30%;
+    background: #F9EDCA;
+}
+
+.componentPictureContainer img{
+    border-top: 3px solid #7c1a0e;
+    width: 80%;
+}
+
+table{
+    margin: 0 auto;
+}
+
+th, td{
+    padding: 0.5em 1em;
+}
+
+th {
+    background-color: #F9EDCA;
+}
+
+.sideKickTable th, .sideKickTable td{
+    font-size: 1.3em;
+}
+
+.sideKickTable {
+    margin-top: 3em;
+}
+
+.sideKickDescription {
+    font-size: 1.1em;
+}

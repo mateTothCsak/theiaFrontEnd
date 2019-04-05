@@ -1,0 +1,75 @@
+
+.encyclopediaContainer{
+    text-align: center;
+}
+
+.encyclopediaContainer img{
+    margin: 0 auto;
+    background-color: #F9EDCA;
+    padding: 1em 0;
+}
+
+.bookPictureContainer{
+    background-color: #F9EDCA;
+}
+
+.encyclopediaBar {
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    display: inline-block;
+    background-color: #8d9933;
+}
+
+.encyclopediaBar li {
+    float:right;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.5em;
+    border: 3px solid white;
+}
+
+.encyclopediaBar li:hover{
+    background-color: #491409;
+}
+
+.encyclopediaBar li:active{
+    background-color: #491409;
+}
+
+.bookElementContainer{
+    margin: 0 auto;
+    width: 70%;
+    background-color: #fffaed;
+}
+
+.bookElementHeader {
+    padding-top: 1em;
+    text-shadow: 0.5px 0.5px 0.5px black;
+    font-size: 2em;
+}
+
+.bookEntry {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: #F9EDCA;
+    border-top: 5px solid #8d9933;
+    border-bottom: 5px solid #8d9933;
+}
+
+.charProfile {
+    width: 45%;
+    padding: 3% 10%;
+    border-left: 10px solid #7c1a0e;
+    background-color: #fffaed;
+}
+
+.charProfile p {
+    font-size: 1.3em;
+    text-align: left;
+    margin: 1em 0;
+}

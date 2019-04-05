@@ -1,0 +1,40 @@
+
+body {
+    background-color: #f0e5c5;
+    font: italic bold 1em "Times New Roman";
+    color: #491409;
+}
+
+
+.centerText{
+    text-align: center;
+}
+
+
+.nonDecoratedLink {
+    color: inherit;
+    text-decoration: inherit;
+    text-shadow: 1px 1px 1px black;
+}
+
+button {
+    background-color: #721b09;
+    color: white;
+    font: italic bold 2em "Times New Roman";
+    border: 1px solid #F9EDCA;
+    padding: 0.2em 0.5em;
+}
+
+button:disabled {
+    background-color: #58413c;
+    color:#3f1712;
+}
+
+button:focus{
+    background-color: #491409;
+}
+
+button:not(:disabled):hover {
+    background-color: #531205;
+
+}

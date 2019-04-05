@@ -1,0 +1,27 @@
+
+.register{
+    margin: 0 auto;
+}
+
+form{
+    margin: 50px auto;
+    text-align: center;
+}
+
+label{
+    font-size: 150%;
+}
+
+input{
+    width: 25%;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+#checkBox {
+    text-align: left;
+    margin-left: 1em;
+    width: 20px;
+}

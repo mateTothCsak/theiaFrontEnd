@@ -1,0 +1,45 @@
+
+.navBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #721b09;
+    font: italic bold 2em "Times New Roman";
+
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+
+    box-shadow: 2px 2px 5px #531205;
+}
+
+.navItem {
+    float: right;
+}
+
+#logo, #pageName {
+    float: left;
+}
+
+#pageName:hover {
+    color: #531205;
+}
+
+.navItem a, #pageName {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navItem a:hover {
+    background-color: #531205;
+}
+
+img {
+    max-width:100%;
+    height:auto;
+    margin-bottom: -0.5em; /*to cover the small gap appearing dispite 'margin:0' from both sides*/
+}
